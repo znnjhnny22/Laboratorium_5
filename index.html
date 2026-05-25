@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Urodzinowy</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+    <main class="flex flex-col items-center w-full max-w-md bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700">
+      <h1 class="text-2xl font-bold mb-6 text-center text-blue-400">Kalkulator dni od urodzenia</h1>
+      
+      <form id="birthday-form" class="flex flex-col gap-4 items-center w-full">
+        <div class="flex flex-col w-full gap-2">
+          <label for="birth-date" class="text-sm font-medium text-slate-300">Wybierz datę urodzenia:</label>
+          <input type="date" id="birth-date" required class="border border-slate-600 bg-slate-700 p-2 rounded text-white focus:outline-none focus:border-blue-400 w-full" />
+        </div>
+        <button type="submit" class="bg-blue-500 p-3 rounded font-semibold text-white hover:bg-blue-600 transition-colors w-full shadow-md">
+          Oblicz
+        </button>
+      </form>
+
+      <dialog id="result-dialog" class="bg-slate-800 text-white p-6 rounded-lg shadow-2xl relative border border-blue-500/30 backdrop:bg-black/60 max-w-sm w-full mx-auto">
+        <button id="close-dialog" class="absolute top-2 right-3 text-2xl font-bold text-slate-400 hover:text-red-400 transition-colors">&times;</button>
+        <div id="dialog-content" class="mt-4 text-center font-medium text-lg text-slate-200"></div>
+      </dialog>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
